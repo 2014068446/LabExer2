@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.dcucharo.labexer2.MainActivity">
+
+    <TextView
+        android:id="@+id/tv_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="102dp"
+        android:text="Username"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tv_1"
+        android:layout_below="@+id/et_username"
+        android:layout_marginTop="62dp"
+        android:text="Password" />
+
+    <EditText
+        android:id="@+id/et_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_1"
+        android:layout_alignBottom="@+id/tv_1"
+        android:layout_marginStart="28dp"
+        android:layout_toEndOf="@+id/tv_1"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="user" />
+
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_2"
+        android:layout_alignBottom="@+id/tv_2"
+        android:layout_alignStart="@+id/et_username"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="pass" />
+
+    <Button
+        android:id="@+id/btn_save_shared_pref"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="savePreference"
+        android:layout_below="@+id/et_password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:text="Shared Preferences" />
+
+    <Button
+        android:id="@+id/btn_save_int_storage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_save_shared_pref"
+        android:layout_centerHorizontal="true"
+        android:onClick="saveIntStorage"
+        android:text="Internal Storage" />
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="callSecondActivity"
+        android:layout_below="@+id/btn_save_int_storage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:text="Next" />
+
+</RelativeLayout>
